@@ -17,12 +17,12 @@ public class Homework4_1 {
         int count = 0;
         for (int i = 0; i < 10; i++) {
             if (number == nums[i]) {
-                count++;}
+                count++;
+            }
         }
-
-        if (count==0) {
-            System.out.println("Число не встречается");}
-        else {
+        if (count == 0) {
+            System.out.println("Число не встречается");
+        } else {
             System.out.println("Число встречается " + count + " раз");
         }
     }
