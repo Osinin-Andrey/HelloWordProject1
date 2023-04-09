@@ -1,0 +1,19 @@
+package by.osinin.homework.lesson6.SenondTask;
+
+public class Ram {
+    public String name;
+    public int size;
+
+    public Ram(String name, int size) {
+        this.name = name;
+        this.size = size;
+    }
+
+    @Override
+    public String toString() {
+        return "Ram{" +
+                "name='" + name + '\'' +
+                ", size=" + size +
+                '}';
+    }
+}
