@@ -3,8 +3,8 @@ package by.osinin.homework.lesson6.FirstTask;
 import java.util.SortedMap;
 
 public class CreditCard {
-    public long numberCard;
-    public int sumOnCard;
+    private long numberCard;
+    private int sumOnCard;
 
     //методы
     public CreditCard(long numberCard, int sumOnCard) {

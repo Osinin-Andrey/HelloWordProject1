@@ -1,8 +1,8 @@
 package by.osinin.homework.lesson6.SenondTask;
 
 public class Ram {
-    public String name;
-    public int size;
+    private String name;
+    private int size;
 
     public Ram(String name, int size) {
         this.name = name;

@@ -1,9 +1,9 @@
 package by.osinin.homework.lesson6.SenondTask;
 
 public class Hdd {
-    public String name;
-    public int size;
-    public String type;
+    private String name;
+    private int size;
+    private String type;
 
     public Hdd(String name, int size, String type) {
         this.name = name;
