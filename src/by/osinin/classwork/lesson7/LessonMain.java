@@ -43,7 +43,7 @@ public class LessonMain {
         }
 
 
-
+//вызов метода массива
         Flyable[] flyingItems = getFlyingItems();
         for (Flyable flyable: flyingItems) {
             flyable.flyWithSound();
