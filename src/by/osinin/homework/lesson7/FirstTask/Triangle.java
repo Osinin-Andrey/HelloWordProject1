@@ -17,9 +17,10 @@ public class Triangle implements Figure {
     }
 
     @Override
-    public void perimeter() {
+    public int getPerimeter() {
         int p = sideA + sideB + sideC;
         System.out.println("Periment triangle: " + p);
+        return p;
         //для вывода инфы о периметре
 
 

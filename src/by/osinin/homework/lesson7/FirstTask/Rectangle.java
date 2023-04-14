@@ -10,16 +10,17 @@ public class Rectangle implements Figure {
         this.sideB = sideB;
     }
 
-    @Override
-    public void perimeter() {
-        int p = 2*(sideA+sideB);
-        System.out.println("Perimeter rectangle: " + p);
 
+    @Override
+    public int getPerimeter() {
+        int p = 2 * (sideA + sideB);
+        System.out.println("Perimeter rectangle: " + p);
+        return p;
     }
 
     @Override
     public void square() {
-        int s = sideA*sideB;
+        int s = sideA * sideB;
         System.out.println("Square rectangle: " + s);
 
     }

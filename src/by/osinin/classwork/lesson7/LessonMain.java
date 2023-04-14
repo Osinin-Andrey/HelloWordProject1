@@ -39,22 +39,21 @@ public class LessonMain {
         if (obj instanceof Airplane) {
             ((Airplane) obj).fly();
         } else if (obj instanceof Duck) {
-            ((Duck)obj).fly();
+            ((Duck) obj).fly();
         }
 
 
 //вызов метода массива
         Flyable[] flyingItems = getFlyingItems();
-        for (Flyable flyable: flyingItems) {
+        for (Flyable flyable : flyingItems) {
             flyable.flyWithSound();
 
         }
     }
 
-
-//ctrl + alt + m
+    //ctrl + alt + m
     private static Flyable[] getFlyingItems() {
-        Flyable [] flyingItems = new Flyable[4]; //объединяем, всё что летает
+        Flyable[] flyingItems = new Flyable[4]; //объединяем, всё что летает
         flyingItems[0] = new Duck();
         flyingItems[1] = new Airplane();
         flyingItems[2] = new Duck();

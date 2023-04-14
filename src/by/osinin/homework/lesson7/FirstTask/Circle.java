@@ -9,9 +9,10 @@ public class Circle implements Figure {
     }
 
     @Override
-    public void perimeter() {
+    public int getPerimeter() {
         float p = 2*3.14f*radius;
         System.out.println("Perimenter circle: " + p);
+        return (int) p;
 
 
     }
