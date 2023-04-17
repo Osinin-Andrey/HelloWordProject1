@@ -1,7 +1,9 @@
 package by.osinin.homework.lesson7.SecondTask;
 
-public class Director implements Position {
-    //написать тут типо директор, что бы выводило
-
-
+public class Director implements Positionable {
+    @Override
+    public void printPosition() {
+        System.out.println("This is Director");
+    }
 }
+
