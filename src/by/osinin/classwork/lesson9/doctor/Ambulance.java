@@ -13,9 +13,9 @@ public class Ambulance {
             //2- прописать им план лечения
             setMedicalPlan(patient);
             //3 - выделить доктора
-            Doctor Doctor = getDoctorToPatient(patient);
+            Doctor doctor = getDoctorToPatient(patient);
             //4 - вылечить
-            Doctor.heal();
+            doctor.heal();
         }
 
 //        //2- прописать им план лечения
