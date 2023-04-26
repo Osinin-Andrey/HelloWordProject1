@@ -10,7 +10,7 @@ public class StringBuilderExample {
         builder.insert(9, "First"); //поставить first на 9 место
         builder.delete(15, 20); //с 15 по 20 строчку удалить
         System.out.println(builder.indexOf("First"));
-        //System.out.println(builder.replace(0,2,"abc")); //какую на что позиции менять
+        System.out.println(builder.replace(0,2,"abc")); //какую на что позиции менять
         //builder.reverse(); //выводит строчку задом наперед
         builder.deleteCharAt(0); //удалить какую-то букву
 

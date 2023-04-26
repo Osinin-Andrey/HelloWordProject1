@@ -37,7 +37,7 @@ public class SecondTestMain {
         System.out.println(str4.startsWith("ab")); //начинается ли моя строчка с ab
         System.out.println(str4.endsWith("ab")); //заканчивается ли моя строчка на ab
 
-        String[] myArr = str.split(" "); //разделить пробелом в массиве предложение, получится 4 элемента
+        String[] myArr = str.split(""); //разделить пробелом в массиве предложение, получится 4 элемента
         System.out.println(Arrays.toString(myArr)); //
 
 
