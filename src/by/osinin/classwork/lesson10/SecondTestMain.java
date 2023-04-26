@@ -18,8 +18,8 @@ public class SecondTestMain {
         String str5 = " ";
         String str6 = null;
 
-        System.out.println(str5.isEmpty()); //
-        System.out.println(str5.isBlank()); //
+        System.out.println(str5.isEmpty()); //пустая строчка ?
+        System.out.println(str5.isBlank()); //чистая строка ?
 
 
         System.out.println(str.replaceFirst("is", "a")); //меняет is на A - 1 раз
@@ -38,7 +38,7 @@ public class SecondTestMain {
         System.out.println(str4.endsWith("ab")); //заканчивается ли моя строчка на ab
 
         String[] myArr = str.split(" "); //разделить пробелом в массиве предложение, получится 4 элемента
-        System.out.println(Arrays.toString(myArr)); //
+        System.out.println(Arrays.toString(myArr)); //между словами не более одного пробела
 
 
 
