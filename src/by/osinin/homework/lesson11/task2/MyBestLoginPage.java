@@ -1,4 +1,4 @@
-package by.osinin.extrawork3;
+package by.osinin.homework.lesson11.task2;
 
 import by.osinin.classwork.lesson11.WrongLoginException;
 import by.osinin.classwork.lesson11.WrongPasswordException;
@@ -10,17 +10,15 @@ import java.awt.event.ActionListener;
 public class MyBestLoginPage extends JFrame {
     private JPanel panel;
     private JTextField loginField;
-    private JPasswordField passwordFieldTwo;
+    private JPasswordField passwordField;
     private JButton button1;
-    private JPasswordField passwordField1;
-
 
     public MyBestLoginPage() {
         button1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-                    checkCredentials(loginField.getText(), passwordFieldTwo.getText());
+                    checkCredentials(loginField.getText(), passwordField.getText());
                     JOptionPane.showMessageDialog (MyBestLoginPage.this, "Login and password are correct");
                 } catch (WrongLoginException ex) {
                     JOptionPane.showMessageDialog (MyBestLoginPage.this, ex.getMessage(), "Oops, something bad with login", JOptionPane.ERROR_MESSAGE);
@@ -44,7 +42,7 @@ public class MyBestLoginPage extends JFrame {
         form.setDefaultCloseOperation(EXIT_ON_CLOSE); //закроется тогда, когда нажмём крестик
         form.setVisible(true); // для того что бы запустить
         form.setSize(300,250); // размер окна при запуске
-       // form.setResizable(false); //запретить растягивать форму
+        form.setResizable(false); //запретить растягивать форму
         form.setLocation(500, 250); // по центру поставить форму
 
     }
