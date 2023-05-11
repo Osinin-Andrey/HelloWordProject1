@@ -1,6 +1,6 @@
 package by.osinin.classwork.lesson13;
 
-public class Person implements Comparable <Person> {
+public class Person implements Comparable <Person> { //тут я хочу что бы сравнивал
     private String firstName;
     private String secondName;
 

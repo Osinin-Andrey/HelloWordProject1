@@ -9,11 +9,11 @@ import java.util.TreeSet;
 public class SetMain {
     public static void main(String[] args) {
         Set<String> firstSet = new HashSet<>(); //очень быстро найти
-        Set<String> secondSet = new TreeSet<>(); //по возрастанию идти
+        Set<String> secondSet = new TreeSet<>(); //сохраняет по возрастанию всегда
         firstSet.add("aFirst");
         firstSet.add("bSecond");
         firstSet.add("cThird");
-        System.out.println(firstSet.add("cThird")); //проверка вставил или не вставил
+        System.out.println(firstSet.add("cThird")); //проверка вставил или не вставил строчку
         secondSet.add("aFirst");
         secondSet.add("aSecond");
         secondSet.add("aThird");
@@ -27,7 +27,7 @@ public class SetMain {
         System.out.println(firstSet.remove("hird")); //тут будет ошибка
 
 
-        Set<Person> myPersonSet = new TreeSet<>();
+        Set<Person> myPersonSet = new TreeSet<>(); //тут надо учить сортировать при помощи метода Compare
         myPersonSet.add(new Person("Andrey", "Osinin"));
         myPersonSet.add(new Person("Dima", "Osinin"));
         myPersonSet.add(new Person("Sveta", "Osinin"));

@@ -16,7 +16,7 @@ public class MapMain {
         secondMap.put(1, "red");
         secondMap.put(2, "orange");
         secondMap.put(3, "Yellow");
-        System.out.println(firstMap.containsKey(3));
+        System.out.println(firstMap.containsKey(3)); //спрашиваем есть ли такое значение
         System.out.println(firstMap.isEmpty()); //проверяем пустая или не пустая
         System.out.println(firstMap.size()); //сколько ключей есть у нашей мепки
         //System.out.println(firstMap.remove(3)); //удали 3 ключ
@@ -25,9 +25,9 @@ public class MapMain {
         System.out.println(firstMap); //как вывести на экран Мепку
 
         for (Integer key: firstMap.keySet()) {
-            System.out.println(firstMap.get(key));
+            System.out.println(firstMap.get(key)); //красиво выводим элементы
         }
-        firstMap.forEach((k,v) -> System.out.println(k + " " + v));
+        firstMap.forEach((k,v) -> System.out.println(k + " " + v)); //красиво выводим элементы
 
         List<Integer> integer;
         List<List<Integer>> integers2;

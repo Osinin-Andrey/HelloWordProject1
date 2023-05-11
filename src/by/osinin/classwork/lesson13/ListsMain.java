@@ -8,12 +8,12 @@ import java.util.List;
 
 public class ListsMain {
     public static void main(String[] args) {
-        List<String> strings = new ArrayList<>();
+        List<String> strings = new ArrayList<>(); //можно заменить на linkedList и ничего не поменяется
         List<String> secondString = new ArrayList<>();
         strings.add("first"); //добавление
         strings.add("second");
         strings.add("third");
-        System.out.println(strings);
+        System.out.println(strings); //сохраняет именно в том порядке как и вводим
         secondString.add("forth");
         secondString.add("fifth");
         strings.addAll(secondString); //добавить все
@@ -37,7 +37,7 @@ public class ListsMain {
         Collections.reverse(secondString); //задом наперед
         System.out.println(secondString);
 
-        Collections.shuffle(strings);//он перемешивает как карты
+        Collections.shuffle(strings);//он перемешивает случайным образом
         System.out.println(strings);
         Collections.shuffle(strings);
         System.out.println(strings);
