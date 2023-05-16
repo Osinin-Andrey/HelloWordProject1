@@ -10,17 +10,17 @@ import java.util.Date;
 
 public class DateMain {
     public static void main(String[] args) {
-        LocalDateTime time;
+        LocalDateTime time; //дата и время
         LocalDate date; //какой сегодня день
-        Date oldDate;
-        Calendar calendar;
+        Date oldDate; // не часто встречается
+        Calendar calendar; // не часто встречается
 
-        date = LocalDate.now();
-        time = LocalDateTime.now();
+        date = LocalDate.now(); // какой сегодня день
+        time = LocalDateTime.now(); // какой сегодня день и время
         System.out.println(date);
         System.out.println(time);
-//      System.out.println(date.plusDays(1));
-//      System.out.println(time.minusDays(1));
+//      System.out.println(date.plusDays(1)); //завтра
+//      System.out.println(time.minusDays(1)); //вчера
 //      date = date.plusMonths(1).plusDays(1).plusYears(1);
         time = time.plusHours(1).plusMinutes(1).plusSeconds(1);
         System.out.println(date.getDayOfMonth());

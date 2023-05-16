@@ -30,7 +30,7 @@ public class FunctionExample {
         System.out.println("Not bananas");
         System.out.println(getOneFruit(fruits, myNotBananaSupplier));
 
-        Function<Fruit, String> getNameFunction = fruit -> fruit.getName();
+        Function<Fruit, String> getNameFunction = fruit -> fruit.getName(); ////приходит фрукт а возращается имя фрукта
         Function<Fruit, String> getShortFunction = fruit -> fruit.getName().substring(0,2);
         Function<Fruit, String> getSizeFunction = fruit -> fruit.getWeight() < 10 ? "Small" : "Big";
     }
