@@ -1,8 +1,9 @@
-package by.osinin.homework.lesson13.task1;
+package by.osinin.homework.lesson13.FirstTask;
 
 import java.util.*;
 
 public class MainWords {
+    //1. Дан текст, нужно прочитать все введенные в нем слова, и вывести их в алфавитном порядке.
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter the text: ");
