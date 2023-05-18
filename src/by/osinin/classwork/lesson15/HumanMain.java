@@ -24,24 +24,24 @@ public class HumanMain {
         }
 
         Optional<Human> fartherOpt = Optional.ofNullable(anonim.getFather());
-        if (fartherOpt.isPresent()) {
+        if (fartherOpt.isPresent()) { // точно он есть или нет
             System.out.println(fartherOpt.get().getName());
         }
 
-        fartherOpt.ifPresent(f -> System.out.println(f.getName()));
-        //Human possibleFather = fartherOpt.orElseThrow();
+        fartherOpt.ifPresent(f -> System.out.println(f.getName())); // вернёт имя, даже есди его нет (null)
+        //Human possibleFather = fartherOpt.orElseThrow(); // если тут ничего нет, то появится ошибка
         // Human possibleFather = fartherOpt.orElseThrow(() -> new RuntimeException("Here"));
         fartherOpt.ifPresentOrElse(fOpt -> System.out.println(fOpt.getName()),
                 ()-> System.out.println("Anonim"));
 
-        Human protector = new Human ("Prot", 100);
+        Human protector = new Human ("Prot", 100); // default
         Human ourDef = fartherOpt.orElse(protector);
         Optional.ofNullable(human.getFather()).orElse(getDefaultHuman());
         Optional.ofNullable(human.getFather()).orElseGet(() -> getDefaultHuman());
 
         fartherOpt.map(f -> f.getFather())
                 .map(f-> f.getFather())
-                .ifPresent(ded -> System.out.println(ded.getName()));
+                .ifPresent(ded -> System.out.println(ded.getName())); // наличие и отца и имени отца
 
         Optional.ofNullable(human)
                 .map(Human::getFather)

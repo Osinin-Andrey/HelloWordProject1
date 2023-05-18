@@ -10,14 +10,14 @@ import java.util.stream.Stream;
 public class StreamMain {
     public static void main(String[] args) throws IOException {
         List<Integer> values = Arrays.asList(1, 2, 10, 50, 3, 4, 5, 10, 50, 3);
-        List<Integer> val2 = List.of(1, 2, 3);
-        List<Integer> empyList = Collections.emptyList();
+        List<Integer> val2 = List.of(1, 2, 3); //нельзя менять
+        List<Integer> empyList = Collections.emptyList(); // подходит для тестов
         //empyList.add(1);
-        List<Integer> singleElement = Collections.singletonList(1);
+        List<Integer> singleElement = Collections.singletonList(1); // лист с одним значением, тоже подходит для тестов
         Stream<List<Integer>> listStream = Stream.of(values, values, val2);
 
-        Stream<Integer> valuesStream = values.stream();
-        Stream<String> stream = Stream.of("A", "B", "C");
+        Stream<Integer> valuesStream = values.stream(); // создание потока
+        Stream<String> stream = Stream.of("A", "B", "C"); // заполнение
         Stream<String> myRows = Files.lines(Paths.get("car.doc")); //читает все строчки файла и помещает в поток
         Stream<Integer> firstStream = Stream.iterate(0, n -> n + 1);
         Stream<Integer> secondStream = Stream.generate(() -> new Random().nextInt(100));
@@ -25,7 +25,7 @@ public class StreamMain {
 //        List<Integer> result = firstStream
 //                .skip(20) //выкини 2 первых значения
 //                .limit(30) //оставить 3 значения
-//                .distinct()
+//                .distinct() // убирает одинаковые значение
 //                .peek(x -> System.out.println(x)) //показывает что на этом этапе происходит
 //                .sorted((o1, o2) -> o2.compareTo(o1)) //сортирует в обратную сторону
 //                .filter(val -> val % 2 == 0) //выкинуть все нечетные
@@ -36,7 +36,7 @@ public class StreamMain {
         firstStream
                 .skip(20) //выкини 2 первых значения
                 .limit(30) //оставить 3 значения
-                .distinct()
+                .distinct()// убирает одинаковые значение
                 //.peek(x -> System.out.println(x)) //показывает что на этом этапе происходит
                 .sorted((o1, o2) -> o2.compareTo(o1)) //сортирует в обратную сторону
                 .filter(val -> val % 2 == 0) //выкинуть все нечетные
@@ -57,7 +57,7 @@ public class StreamMain {
         //System.out.println(integerSet);
 
 
-        System.out.println(listStream.flatMap(Collection::stream) //собири числа в один поток
+        System.out.println(listStream.flatMap(Collection::stream) //собери числа в один поток
                 .filter(x -> x < 3)
                 .noneMatch(x -> x % 3 == 0)); //точно ли нет ни одного икса с таким условием
         //.allMatch(x -> x > 1)); //что все числа больше единицы
@@ -68,7 +68,7 @@ public class StreamMain {
         //.max((o1, o2) -> o1.compareTo(o2)).orElseThrow()); //найдёт максимальное число (50)
         //.count()); //сколько там их осталось
         //.collect(Collectors.toSet());
-        //.toList();
+        //.toList(); // соединяет листы в один большой
 
     }
 }
