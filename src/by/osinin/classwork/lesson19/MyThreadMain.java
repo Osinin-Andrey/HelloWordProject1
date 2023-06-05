@@ -4,16 +4,16 @@ import java.time.LocalDateTime;
 
 
 
-public class MyThreadName {
+public class MyThreadMain {
     public static void main(String[] args) throws InterruptedException {
         System.out.println("Start: " + LocalDateTime.now()); //сколько сек работает программа
         MyThread thread1 = new MyThread("First");
         MyThread thread2 = new MyThread("Second");
         thread2.setPriority(Thread.MAX_PRIORITY); //приоритеты которые так себе работают
         thread1.setPriority(Thread.MIN_PRIORITY);
-        System.out.println("State: " + thread1.getState());
+        System.out.println("State: " + thread1.getState()); //проверить состояние потока
         MyThread thread3 = new MyThread("Third");
-        thread3.setDaemon(true); //демон поток
+        thread3.setDaemon(true); //поток выключается сразу после выполнения основных потоков
         thread1.start(); //что бы запустить поток
         System.out.println(thread1.isAlive()); //живой поток или нет
         thread2.start();

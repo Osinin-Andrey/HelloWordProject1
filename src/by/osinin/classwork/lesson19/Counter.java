@@ -6,8 +6,8 @@ public class Counter {
 
     private int count;
     private AtomicInteger intCount; //гетер и сетер одной операцией
-    private final Object lock = new Object();
-    private volatile int counter; //
+    private final Object lock = new Object(); // для синхронизаций
+    private volatile int counter; //каждый раз когда хочешь взять бери со старого
 
     public int getCount() {
         return count;
